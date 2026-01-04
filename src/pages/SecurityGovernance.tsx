@@ -2,7 +2,7 @@ import { Section } from '../components/ui/Section';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
-import { ShieldAlert, FileSearch, Lock, Database } from 'lucide-react';
+import { ShieldAlert, Lock, Database } from 'lucide-react';
 
 export default function SecurityGovernance() {
     return (
