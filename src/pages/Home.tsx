@@ -11,7 +11,6 @@ export default function Home() {
             {/* Hero Section */}
             <section className="relative pt-16 pb-20 lg:pt-36 lg:pb-32 overflow-hidden">
                 {/* Background Elements */}
-                {/* Background Elements */}
                 <div className="absolute inset-0 -z-20 pointer-events-none overflow-hidden">
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl opacity-60 animate-pulse" />
                     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl opacity-60" />
@@ -56,7 +55,7 @@ export default function Home() {
                                 style={{
                                     left: logo.x,
                                     top: logo.y,
-                                    width: logo.size,
+                                    width: 'clamp(40px, 10vw, ' + logo.size + 'px)',
                                     height: 'auto',
                                 }}
                             >
@@ -74,7 +73,7 @@ export default function Home() {
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 0.05, scale: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-auto -z-30 pointer-events-none"
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] lg:w-[800px] h-auto -z-30 pointer-events-none"
                     >
                         <img src="/logos/microsoft-365.png" alt="Microsoft 365" className="w-full h-auto" />
                     </motion.div>
@@ -90,11 +89,11 @@ export default function Home() {
                             <img src="/logos/microsoft-365.png" alt="M365" className="w-5 h-5" />
                             <span>Enterprise Microsoft 365 Mastery</span>
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                             Microsoft 365, <br />
                             <span className="text-primary">owned and under control.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
+                        <p className="text-lg sm:text-xl md:text-2xl text-muted max-w-3xl mx-auto mb-10 leading-relaxed">
                             We help growing companies run Microsoft 365 as a
                             secure, governed, and automated platform — not a fragile set of tools.
                         </p>
@@ -195,7 +194,7 @@ export default function Home() {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.5, delay: i * 0.1 }}
-                                        className="flex gap-4 p-4 rounded-2xl hover:bg-primary/5 transition-colors group"
+                                        className="flex flex-col sm:flex-row gap-4 p-4 rounded-2xl hover:bg-primary/5 transition-colors group"
                                     >
                                         <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-sm border border-border flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                             <item.icon size={24} />
@@ -209,9 +208,9 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="relative">
+                        <div className="relative mt-20 md:mt-0">
                             {/* Minimalism Logo Orbit visualization */}
-                            <div className="relative aspect-square flex items-center justify-center">
+                            <div className="relative aspect-square flex items-center justify-center transform scale-75 sm:scale-90 lg:scale-100 origin-center">
                                 {/* Decorative Circles */}
                                 <motion.div
                                     animate={{ rotate: 360 }}
@@ -254,7 +253,7 @@ export default function Home() {
                                         viewport={{ once: true }}
                                         transition={{ delay: logo.delay, type: "spring" }}
                                         style={{ x: logo.x, y: logo.y }}
-                                        className="absolute w-14 h-14 bg-white rounded-xl shadow-lg border border-border p-3 group hover:scale-125 transition-transform cursor-pointer"
+                                        className="absolute w-12 h-12 md:w-14 md:h-14 bg-white rounded-xl shadow-lg border border-border p-2 md:p-3 group hover:scale-125 transition-transform cursor-pointer"
                                     >
                                         <img src={logo.src} alt="tool" className="w-full h-full object-contain" />
                                         <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-10 transition-opacity rounded-xl" />
@@ -270,7 +269,7 @@ export default function Home() {
             <Section className="text-center bg-secondary">
                 <div className="container-custom">
                     <h2 className="text-3xl font-bold mb-6">Stop guessing your security posture</h2>
-                    <p className="text-xl text-muted mb-10 max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-muted mb-10 max-w-2xl mx-auto">
                         Get a clear, honest assessment of your Microsoft 365 environment.
                         Know exactly where you stand and what needs to change.
                     </p>
